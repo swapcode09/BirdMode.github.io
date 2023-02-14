@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Silicon | Courses</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/css/boxicons.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <script src="https://kit.fontawesome.com/7880d6493d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/7880d6493d.css" crossorigin="anonymous">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WKV3GT5');
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+    
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+    </noscript>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+        <div class="container px-3">
+          <a href="landing-online-courses.html" class="navbar-brand pe-3">
+            <img src="images/birdlogo.png" width="47" alt="Silicon">
+            BirdMode
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="birdgallery.html" class="nav-link">Bird Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="about.html" class="nav-link">About Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
+                &nbsp;Buy now
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            <i class="bx bx-cart fs-5 lh-1 me-1"></i>
+            &nbsp;Buy now
+          </a>
+        </div>
+      </header>
+
+
+      <!-- Page content -->
+      <section class="container">
+
+
+        <!-- Breadcrumb -->
+        <nav class="pt-4 mt-lg-3" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item">
+                <a href="birdgallery.html"><i class="fa-sharp fa-solid fa-house"></i>Menu</a>
+              </li>
+              
+              <li class="breadcrumb-item active">
+               <i class="fa-sharp fa-solid fa-angles-right"></i>
+               About Us
+              </li>
+            
+            </ol>
+        </nav>
+
+
+        <!-- Page title + Filters -->
+        <div class="d-lg-flex align-items-center justify-content-between py-4 mt-lg-2">
+          <h1 class="me-3">Window Birding Birds</h1>
+        </div>
+
+
+        <!-- Courses grid -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gx-3 gx-md-4 mt-n2 mt-sm-0">
+
+          <!-- Item -->
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8D5yWgRDkEYB-o_J1WlvUpC931ux9H4UKCV3VViDY6hRInF5aOz5o3Ohwkc8yfl9pygXVHVt0BP_tz6ONW47Fb-vSXyDGpDKzH8uFzjUH-9nJr7i-zjnVgHRofUwt9dhWOXXyMw1qq2E3x1T3IwYRvq=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Pigeon</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8CCdxSIfiloGuFeaoFBJLAu-nDjl4FRo8BeaGVm7c1vAo-jI1AIlSF9SW1jr7VKtQ4AcFakms09qKHFM-tpsyuWQGmJAtBDRnvOrMxLAeY7Z75GJnnFa5w1_zMbFJmM5jVT5oqs8Vb5IGhkeIEyYhnH=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Common Myna</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8DxyhRME4vIJ9RbiDL0pDm9POfA7zzEyxsgFQeH6pm7BLMuzUesplv1pzM5rjI8BwCiZ5pm5HC8T70xv39OkM6_aLB4zyHQuFRjz6LzazRDfm3Og4JnvI5m4YeUEUHDqqtrUdaV1nIu26m4P4ZPLR15=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Asian Green Bee Eater</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8B1bZkXkigpzymWU4K-lhkqRi1i6-BvMAZS-5yuIDFk8mXcPgeRXjVTSySiycsU1zdAzz8PAVEx_TQyouwMmsrZJeFceoHZTwOHGOF8CEmMUIullQtGwRm-ks0j6Pl7vWyOIFLOK5jv8wEaOnX4VUdY=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Red Vented Bulbul</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8CvX7iH659NtDQnQZRoppTwyD_V61eTSR_cgaQOC28VFK8mdwns1A9qlFl7gxz5z7jf3_SweW3oRmsyibFD8WjTkfzzu0_vu95LVeDcptHFVNZcVbAdpoYS4VrGFCcYkV62DUF8YJ58COBh9bCn3maH=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Purple Rumped Sunbird</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8DiD_q4GG-ep1p8rgJLhePjLFrwfrlZnlP0vc78ktwKfVaoh71TKEcmpNz8gSFZobxwfJJVmsTfERiUnpX1THnQSKOI6VVquBhuwJeCErWaHCtz9po8bQg0-i3qA-_Mr-Urc4FM0DjUhpP6vfZrjbDA=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Oriental Magpie Robin</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8CH5pX_SisubfamxJaku9CEDvB8cfodTNL_hT0JZGAYz2zugbnFuKjiucGpnHAZrH0sDUALGH5FDqDuB08OIlhg_KNwJDNCOmF-h0XstnPm4rGs9kbvtUxrJG8at6YQxA3q8SkN63GFgB_tqvxsTMMS=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Rose Ringed Parakeet (Male)</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8BgsKGitnXUPTjlRbxvuz4hLrq9Aw8p1PumWKRu-o9KKKd5qWHlYdo84vijPbQ2IRFbLPrZw_0mdYHq4NSE4Ul4UmZ7Oa5VVY7_gOhaWcsbIz_QOb_eGJvqW0XizbEvtYMp8RtkIvucfrUhn-K0s3mI=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Rose Ringed Parakeet (Female)</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8DEK6d35nc_YWlvg5onSKTj12bfQI13wkL7sHKgtB7pq05TnFguBoYPGo5YE6N0FqRDxtoNi4dmkBBkHxlc3weBOTVL9y-Wzhc_futzsUJut7yYdinIZ1zYsuQQt2iqBylRs_DS2DmK-rbEt0G2HWmP=w1035-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Coppersmith Barbett</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8BthIQm7kVpUwnf-dGd45RJ3HvC2MLERSpHcwWJRGlW3tFacKkeT_aAg5y3hBxH3eUtHkbLr5mlHVxsI00Av-RM8HD4c1MSKzmneEvSA6g8KW3RcL33TytDPMkGMPbDVB2o6nZKZL95tzqQnCRRQdL2=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Shikra</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8DO-XUo-Nn_bK559oYkAbqOIM3L_q0qet0l1EQS_808DLou0qwQnqnFi_wEy-e0oxEEKkuhGdaf6OEUWhxDLO4R3IyCnnNdnqvpL3RpClZuOvAP_7PHh3A3-E7rs_h5cnJ7njB3sT8Gd_wM2TQwqev0=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Greater Coucal - Bharadwaj</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8DcUj2Y5YqLVRTcYx_DehiZJCC-1B0S_ql9VmNw_TPi-VgOHkXQV7Q2xaH7XQPfIYEcGxlaNbm-npGl1y17TI8AtCfmIbF1Eu6653jyyAg6FTf8BQSfeoObBRZCXarg-KgQ5aIAU6TbIVoYgiVoO0TU=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">White-spotted fantail
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8A4d-7NDt8mFkCcZwQFrS1UV-bG5c0xp5AmKCmkfjWKQOhrlc_U5__IulFER-HdAQ5qqmKIZbyYvPB-AyGYcgR5Ndjbuwdl0XZJ7jdw9kc09VBOn7fKuQToIVQwNpmzHxsJablJzZWJmBkCXgHTiQU4=w1190-h893-no?authuser=0" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Black drongo
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8AqFVRkaNr69Gp_vR_N5JQNO6I0zcu6e3-brMDKglbCKG5EVGNsHb3zZjMKkfuJ1PpLrxwnwnuai6gxIn6yqQfNxe7CyeacHnIPNBIYSBc4-zazOuaUtBQw8ucFKB7uh5UzLW5JEm5_tBO3hHOC-AVB=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Indian Golden Oriole
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8DzxGJCDIzYIb-_DAQiYzOj7yuH31qqdrH7aJ7QVBamNLUCIDrB2gkHghpTrYyG8EohDi1dBWyzALU9tVPINT6WhGStro48h4fGGmnH9G-9T3StgZJUnGvC8AqMo6exuXnI44JjtIWC5a8yiFd8K3ea=w1190-h893-no?authuser=0" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Scaly Breasted Munia
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8DEC8QCtEKEOKVMx9Gh5krJXh9XJrj9v4u5bQ3-rxei3pPoAJZZnoHpnvddyj1LcO0v1VVPriFTN_1OALtqYck5q1If_Zpn2POYFzRrrZNJ4ojqWRXlt7buC6AEDnS5zdJqxg6hUhnBUDVAmPUIvUk0=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Asian Koel (Female)
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8BIClquhCoaOh4EDEpYTlSq-wCO8chNyz9_BPZff-d7Ueuq2l-NxpNcosOMB0vFRfzRqyve_wMQSgaI5IEAK2Sx3n6MwMn4th5LDfqvBA2ETRMlymCZh_NQSwEjcva_g42M5ofOPikwx_mTAUtZkqRK=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Asian Koel (Male)
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8DKZ0iAbRjMyggPJKbxn5RjG38JgjTU3idAXOOTKgSPnmEgE23wbsdmMynMRxr97EG8MXygm6JwKFEtmX3UoqWxzoAb_UGaPisdhNSoTo7-j-MgxKh_2WxGEGp3N18bYjYJZWNthAy8dVdn06nnLiJi=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Common Tailorbird
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8CN9wWeIl32Y_g5mZGM907InUS-XhmdThn_T5bHS9CMi1U6oMVC-4fh3owk8b6kcoe8VVjbLLc6-CC4kTVgektVSumWBFlVQAx6q5SZycObK_gV1fv3T7exJdwmwPwzdMRPc2DSt3MKxioIWZvuOle5=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Sparrowhawk
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8D9SfpfaaexIlGYBCyqAqPX6EtItme8nyVoLD5KlNpTVssecgnYLBzddAsMvJHxVNSAuYcoDRyiFzFouAtkBMfeogTUhfQJgB2MJ7JHaPd8QVIde-Kf88iF5dOWdBwGmZuC7ruTBYAwvDGpCmZKW2dK=w1083-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">White Throated Kingfisher
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+          <div class="col pb-1 pb-lg-3 mb-4">
+            <article class="card h-100 border-0 shadow-sm">
+              <div class="position-relative">
+                <img src="https://lh3.googleusercontent.com/pw/AMWts8AbcJ7o-71p_hksLVSWSwGnYqcu5wlEzsonGadgUHTjxo53xsv0fTxOkMhQq1_TKNPYRNkjAwfGC0WsC0EiyyvNPD3i27HwFpw3ZQBcj1RV5jnYdW5z8bXP_T8glSqJb9cG-4wXQU4py5zu-e9KYxZu=w1190-h893-no?authuser=1" class="card-img-top" alt="Image">
+              </div>
+              <div class="card-body pb-3">
+                <h3 class="h5 mb-2">
+                  <a href="portfolio-single-course.html">Red Naped Ibis
+</a>
+                </h3>                
+              </div>
+
+            </article>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-4 pb-lg-5">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+       
+   
+        </div>
+        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+          &copy; Made by Swapnil Sapre
+         
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
